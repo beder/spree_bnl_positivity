@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<wsdl:definitions name="PaymentTranGateway"
+  targetNamespace="http://services.api.web.cg.igfs.apps.netsw.it/"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services.api.web.cg.igfs.apps.netsw.it/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+      xmlns:tns="http://services.api.web.cg.igfs.apps.netsw.it/"
+      xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://services.api.web.cg.igfs.apps.netsw.it/"
+        schemaLocation="PaymentTranGateway.xsd"></import>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="confirm">
+    <wsdl:part element="tns:Confirm" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmResponse">
+    <wsdl:part element="tns:ConfirmResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <!--wsdl:message name="capture">
+    <wsdl:part element="tns:Capture" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="captureResponse">
+    <wsdl:part element="tns:CaptureResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message-->
+  <wsdl:message name="voidAuth">
+    <wsdl:part element="tns:VoidAuth" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="voidAuthResponse">
+    <wsdl:part element="tns:VoidAuthResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="auth">
+    <wsdl:part element="tns:Auth" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="authResponse">
+    <wsdl:part element="tns:AuthResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="credit">
+    <wsdl:part element="tns:Credit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="creditResponse">
+    <wsdl:part element="tns:CreditResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PaymentTranGateway">
+    <wsdl:operation name="confirm">
+      <wsdl:input message="tns:confirm" name="confirm">
+      </wsdl:input>
+      <wsdl:output message="tns:confirmResponse" name="confirmResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <!--wsdl:operation name="capture">
+      <wsdl:input message="tns:capture" name="capture">
+      </wsdl:input>
+      <wsdl:output message="tns:captureResponse" name="captureResponse">
+      </wsdl:output>
+    </wsdl:operation-->
+    <wsdl:operation name="voidAuth">
+      <wsdl:input message="tns:voidAuth" name="voidAuth">
+      </wsdl:input>
+      <wsdl:output message="tns:voidAuthResponse" name="voidAuthResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auth">
+      <wsdl:input message="tns:auth" name="auth">
+      </wsdl:input>
+      <wsdl:output message="tns:authResponse" name="authResponse">
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="credit">
+      <wsdl:input message="tns:credit" name="credit">
+      </wsdl:input>
+      <wsdl:output message="tns:creditResponse" name="creditResponse">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentTranGatewaySoapBinding" type="tns:PaymentTranGateway">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="confirm">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="confirm">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="confirmResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <!--wsdl:operation name="capture">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="capture">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="captureResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation-->
+    <wsdl:operation name="voidAuth">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="voidAuth">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="voidAuthResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auth">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="auth">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="authResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="credit">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="credit">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="creditResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentTranGateway">
+    <wsdl:port binding="tns:PaymentTranGatewaySoapBinding" name="PaymentTranGatewayPort">
+      <soap:address location="https://testbnl.netsw.it/BNL_CG_SERVICES/services/PaymentTranGatewayPort"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

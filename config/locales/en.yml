@@ -1,0 +1,9 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  bnl_positivity:
+    transaction_description: "Shop on %{host} (order %{order_number})"
+    flash:
+      cancel: "Please complete payment with BnlPositivity"
+      generic_error: "Something went wrong with BnlPositivity: %{message}"
