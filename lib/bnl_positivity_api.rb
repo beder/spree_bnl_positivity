@@ -115,7 +115,7 @@ class BnlPositivityApi
       wsdl: 'https://testbnl.netsw.it/BNL_CG_SERVICES/services/PaymentInitGatewayPort?wsdl',
       ssl_verify_mode: :none,
       pretty_print_xml: true,
-      log: true,
+      log: Rails.env.development?,
       convert_request_keys_to: :none
     })
   end
@@ -125,7 +125,7 @@ class BnlPositivityApi
       wsdl: '/Users/paolochiodi/Projects/spree_bnl_positivity/config/bnl_positivity_missing.wsdl',
       ssl_verify_mode: :none,
       pretty_print_xml: true,
-      log: true,
+      log: Rails.env.development?,
       convert_request_keys_to: :none
     })
   end
