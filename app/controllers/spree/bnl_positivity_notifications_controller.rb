@@ -1,7 +1,3 @@
-require 'openssl'
-require 'Base64'
-require 'savon'
-
 module Spree
 
   class BnlPositivityNotificationsController < StoreController
