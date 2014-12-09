@@ -112,7 +112,7 @@ class BnlPositivityApi
 
   def init_client
     @init_client ||= ::Savon.client({
-      wsdl: 'https://testbnl.netsw.it/BNL_CG_SERVICES/services/PaymentInitGatewayPort?wsdl',
+      wsdl: "#{server}/PaymentInitGatewayPort?wsdl",
       ssl_verify_mode: :none,
       pretty_print_xml: true,
       log: Rails.env.development?,
@@ -122,7 +122,7 @@ class BnlPositivityApi
 
   def pay_client
     @pay_client ||= ::Savon.client({
-      wsdl: '/Users/paolochiodi/Projects/spree_bnl_positivity/config/bnl_positivity_missing.wsdl',
+      wsdl: "#{server}/PaymentTranGatewayPort?wsdl",
       ssl_verify_mode: :none,
       pretty_print_xml: true,
       log: Rails.env.development?,
