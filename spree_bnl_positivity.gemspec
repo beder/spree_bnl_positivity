@@ -3,11 +3,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_bnl_positivity'
   s.version     = '2.3.1'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Gem summary'
+  s.description = 'Gem description'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
+  s.author    = 'Paolo Chiodi'
   # s.email     = 'you@example.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
