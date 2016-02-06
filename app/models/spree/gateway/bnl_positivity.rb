@@ -42,10 +42,10 @@ module Spree
     def capture(amount, bnl_transaction_id, gateway_options={})
       bnl_transaction = BnlPositivityTransaction.find(bnl_transaction_id)
 
-      BnlPositivityApi.new(bnl_transaction.payment.payment_method.api_params).capture(amount/100, {
+      BnlPositivityApi.new(bnl_transaction.payment.payment_method.api_params).capture(amount, {
         identifier:       bnl_transaction.identifier,
         transaction_id:   bnl_transaction.transaction_id,
-        split_tran:       bnl_transaction.split?(amount/100)
+        split_tran:       bnl_transaction.split?(amount)
       })
     end
 

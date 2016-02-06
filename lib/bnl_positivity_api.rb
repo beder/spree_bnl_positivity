@@ -38,7 +38,7 @@ class BnlPositivityApi
 
     options = {
       trType:         'AUTH',
-      amount:         fix_amount(amount),
+      amount:         amount,
 
       tid:            tid,
       shopID:         params[:identifier],
@@ -86,7 +86,7 @@ class BnlPositivityApi
 
   def options_for_capture(amount, params)
     options = {
-      amount:       fix_amount(amount),
+      amount:       amount,
 
       tid:          tid,
       shopID:       params[:identifier],
@@ -129,11 +129,6 @@ class BnlPositivityApi
       convert_request_keys_to: :none
     })
   end
-
-  def fix_amount(amount)
-    (amount * 100).to_i
-  end
-
 
   class Response
 
