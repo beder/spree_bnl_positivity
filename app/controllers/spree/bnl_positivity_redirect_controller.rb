@@ -15,8 +15,7 @@ module Spree
       })
       payment.started_processing
 
-
-      res = BnlPositivityApi.new(payment_method.api_params).authorize(payment.amount.to_f, {
+      res = BnlPositivityApi.new(payment_method.api_params).authorize((payment.amount * 100).to_i, {
         identifier:     transaction.identifier,
         email:          transaction.email,
         currency:       transaction.currency.split('-').first,

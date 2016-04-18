@@ -30,7 +30,7 @@ class BnlPositivityTransaction < ActiveRecord::Base
   end
 
   def split?(amount)
-    payment.order.total.to_f != amount
+    (payment.order.total * 100).to_i != amount
   end
 
 end
